@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 2-4</title>
+    <script>
+        // 조건문
+        // 프로그램 내부에서 어떠한 조건에 의하여 그 결과값에 따라 프로그램의 실행여부가 판단되는 명령어
+        // if문, switch ~case 문
+
+        // if : 주어진 조건에 논리적으로 true인지 false인지 판단하여 아래의 코드블럭을 실행하는 조건문
+        // 1. if문 : 조건이 참일 경우 아래의 코드블럭을 실행함, 거짓일 경우 실행하지 않고 넘어감
+        // 2. if ~ else문 : 조건이 참일 경우 아래의 코드블럭을 실행하고, 거짓일 경우 else 코드 블럭을 실행하는 조건문
+        //                  2가지 경우중 하나를 무조건 실행, 조건 연산자의 기능을 대체할수 있음
+        // 3. if ~ elseif~ else문 : 조건을 여러개 사용하고 첫번째 조건이 참일경우 바로 아래의 코드블럭을 실행하고
+        //  거짓일 경우 다음 조건을 통하여 참인지 거짓인지를 판별. 여러개의 조건을 사용하기 때문에 계속 다른 조건을 비교하여 조건에 해당하는 코드블럭을 실행
+         
+        console.log("\n==========조건문==========\n")
+        var score = 90;
+        var myscore = prompt("점수를 입력하세요 ")
+        if (myscore > score) {
+            console.log("A학점 축하합니다.");
+        }
+
+        console.log("당신의 점수는 " + myscore + "입니다.");
+        console.log("=====================");
+        var result = prompt("당신의 탕수육은 부먹입니까 찍먹입니까")
+        if (result == "부먹"){
+            console.log("저는 부먹입니다.");
+        }
+        else {
+            console.log("저는 찍먹입니다.");
+        }
+
+        console.log("=====================");
+        var myScore = prompt("당신의 점수를 입력하세요", "80");                     // "80"은 써도 되고 안써도 되는 기본값
+        if (myScore >= 90) {
+            console.log("당신의 점수는 " + myScore + "점 이고 A학점 입니다.");
+        }
+        else if (myScore >= 80) {
+            console.log("당신의 점수는 " + myScore + "점 이고 B학점 입니다.");
+        }
+        else if (myScore >= 70) {
+            console.log("당신의 점수는 " + myScore + "점 이고 C학점 입니다.");
+        }
+        else if (myScore >= 60) {
+            console.log("당신의 점수는 " + myScore + "점 이고 D학점 입니다.");
+        }
+        else {
+            console.log("당신의 점수는 " + myScore + "점 이고 F학점 입니다.");
+        }
+
+
+        // 주의점 : 조건을 입력 시 조건 검색 값을 순서대로 입력해야함. 작은 수와 상위 결과값을 조합한 이상한 결과가 나올수도....
+
+        console.log("=====================");
+        // 문제) 중국집에 가서 먹고싶은 메뉴를 선택하는 프로그램을 작성하세요
+
+        var mymenu = prompt("당신은 중국집에 와있습니다. 메뉴를 고르세요\n\n자장면\n짬뽕\n볶음밥\n잡채밥\n우동");
+
+        if (mymenu=="자장면") { 
+            console.log("사장님 자장면주세요");
+        }
+        else if (mymenu=="짬뽕"){
+            console.log("사장님 짬뽕주세요");
+        }
+        else if (mymenu=="볶음밥"){
+            console.log("사장님 볶음밥주세요");
+        }
+        else if (mymenu=="잡채밥"){
+            console.log("사장님 잡채밥주세요");
+        }
+        else if (mymenu=="우동"){
+            console.log("사장님 우동주세요");
+        }
+        else {
+            console.log("여기 메뉴도 없네");
+        }
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

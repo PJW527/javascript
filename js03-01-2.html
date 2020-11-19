@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 3-1</title>
+    <script>
+
+
+        // 요일을 입력하는 부분을 사용자가 날짜를 입력하면 해당하는 요일이 출력되는 프로그램을 작성하세요
+
+        var year;
+        var month;
+        var dayy;
+
+        var date2 = prompt("년도를 입력하세요")
+        if (date2>9999){
+            console.log("년도가 잘못 입력됨")
+
+        }
+        else if (date2<1000){
+            console.log("년도가 잘못 입력됨")
+
+        }
+        else {
+            year = date2 + "-"
+        }
+        var date3 = prompt("월을 입력하세요")
+        if (date3>=13){
+            console.log("몇달인지 잘못 입력됨")
+
+        }
+        else if (date3<0){
+            console.log("몇달인지 잘못 입력됨")
+
+        }
+        else {
+            month = date3 + "-"
+            
+        }
+        var date4 = prompt("일을 입력하세요")
+        if (date4>=32){
+            console.log("몇일인지 잘못 입력됨")
+
+        }
+        else if (date4<0){
+            console.log("몇일인지 잘못 입력됨")
+
+        }
+        else {
+            dayy = date4
+        }
+
+        console.log("입력받은 날짜는"+year+month+dayy+"입니다.")
+
+        day2 = new Date(year+month+dayy).getDay();
+
+        if (day2 == 1){
+            console.log("월요일")
+        }
+
+        else if (day2 == 2) {
+            console.log("화요일")
+        }
+
+        else if (day2 == 3) {
+            console.log("수요일")
+        }
+
+        else if (day2 == 4) {
+            console.log("목요일")
+        }
+
+        else if (day2 == 5) {
+            console.log("금요일")
+        }
+
+        else if (day2 == 6) {
+            console.log("토요일")
+        }
+
+        else if (day2 == 0) {
+            console.log("일요일")
+        }
+
+        else {
+            console.log("요일을 받을수 없음")
+        }
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

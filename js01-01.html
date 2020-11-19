@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 1-1</title>
+
+    <script>
+        // 자바.
+        // 많이쓰고, 활용 많이하고, 컴파일 필요없고, 웹서버와 통신도 한단다
+        // 자바는 느리기 때문에 규격이 느슨하다. 해석하는 시간 줄일려고
+
+        // 자바스크립트는 c언어 기반이기 때문에 주석도 바뀜
+        // 자바스크립트 사용 방법
+        // 1. 인라인 방식
+            // html 태그에 직접 소스 코드 입력
+        // 2. script 태그 안에 작성
+            // html 문서 내에 <script> 태그 사용후 소스코드 입력
+        // 3. 외부 자바스크립트 파일 로드.
+            // 확장자 명이 js인 파일을 생성후 해당 파일에 소스코드 입력
+            // 해당 파일을 <script> 태그를 통하여 로드하여 사용
+
+        // script 함수는 헤드, 바디 어느곳에나 사용가능하지만 요즘은 헤드나 바디 최하단에 쓰는 경우가 많음
+
+        function over(obj) {
+            obj.src="./images/pengsu02.jpg"               //       2번방식과 연계 (this가 가리키는 img 태그를 여기로 가져와서 obj로 바꿈)
+        }
+
+        function out(obj) {
+            obj.src="./images/pengsu03.jpg"               //       2번방식과 연계
+        }
+    </script>
+    <!-- <script src="./lib.js"></script>                    외부 자바스크립트 파일 호출 -->
+
+
+
+</head>
+<body>
+    <h3>javascript 사용 방법</h3>
+    <!-- 1번방식 -->
+    <h4>인라인 방식</h4>
+    <img src="./images/pengsu01.jpg" alt="" onmouseover="this.src='./images/pengsu02.jpg'" 
+    onmouseout="this.src='./images/pengsu03.jpg'">                               <!--        인라인에서 바로 연계됨 -->
+
+    <br><br><br>
+    <!-- 2번방식 -->
+    <h4>script 태그 방식 (이것도 첫번째 방식, 요즘 잘 안씀)</h4>
+    <img src="./images/pengsu01.jpg" alt="" onmouseover="over(this)" onmouseout="out(this)">        <!--       헤드와 연계 -->
+
+    <br><br><br>
+    <!-- 3번방식 -->
+    <h4>script 태그 방식 (요즘 방식)</h4>
+    <img id="img3" src="./images/pengsu01.jpg" alt="">                                              <!--       바디와 연계 -->
+
+    <br><hr><br>    
+    
+    <h4>외부 자바스크립트 파일 로딩 1</h4>
+    <img src="./images/pengsu01.jpg" alt="" onmouseover="over2(this)" onmouseout="out2(this)">
+    
+    <hr>
+    <h4>외부 자바스크립트 파일 로딩 2 (요즘 방식)</h4>
+    <img id="img4" src="./images/pengsu01.jpg" alt="">                  
+    
+    <br><br><br>    <br><br><br>    <br><br><br>
+    <script>
+                                                                // 3번방식과 연계
+        var img3 = document.getElementById("img3");                        // 변수선언 키워드 img3 =  html 문서.id값이 img3인 html 태그 찾기;
+
+        img3.addEventListener("mouseover",                                 // img3.이벤트등록("마우스 올라가면",                                                               
+        function() {                                                        // 함수 () {
+            this.src ="./images/pengsu02.jpg"                                //         이 img3은 "pengsu2번 사진이 된다" });
+            // img3.src로 하는것도 편함
+        });
+        img3.addEventListener("mouseout",
+        function() {
+            this.src ="./images/pengsu03.jpg"                                   // 마찬가지로 이벤트등록을 마우스 빼면 3번짤로 바뀌게 만듬
+        });
+
+
+
+    </script>
+    <!-- 자바스크립트 코드 파일 저장은 확장자 .js 파일에 저장하며
+        script 태그 없이 자바스크립트 코드만 저장. 여러 웹페이지에서 불러서 사용할수 있다는게 장점. 중복 작성 불필요
+         script 태그의 src 속성으로 파일을 불러 사용
+            <script src="파일이름.js"></script>                          -->
+
+    <script src="./lib.js"></script>                            <!--  외부 자바스크립트 파일 호출 -->
+</body>
+</html>
+
+

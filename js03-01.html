@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 3-1</title>
+    <script>
+        var fruits = prompt("과일을 고르세요", "바나나")
+        var price = 0;
+
+        switch(fruits){
+
+            case "바나나":
+            price = 200;
+            break;
+
+            case "사과":
+            price = 300;
+            break;
+
+            case "체리":
+            price = 400;
+            break;
+
+            default:
+            console.log("팔지 않습니다")
+            price = 0;
+        }
+
+        console.log(0);
+        
+
+        console.log("======================");
+
+        fruits="사과"
+        price=0;
+
+        if (fruits == "바나나") {
+            price = 200;
+        }
+
+        else if (fruits == "사과") {
+            price = 300;
+        }
+
+        else if (fruits == "체리") {
+            price = 400;
+        }
+
+        else {
+            price = 0;
+            console.log("팔지 않습니다");
+        }
+
+        console.log(price);
+
+        console.log("======================");
+
+        var date = new Date("2020-11-28").getDay();                 //getDay는 오늘날짜를 가져옴. 요일을 0~6으로 가져옴
+        var tooday = "";
+
+        switch (date) {
+            case 1:
+            tooday = "월요일";
+            break;
+
+            case 2:
+            tooday = "화요일";
+            break;
+
+            case 3:
+            tooday = "수요일";
+            break;
+
+            case 4:
+            tooday = "목요일";
+            break;
+
+            case 5:
+            tooday = "금요일";
+            break;
+
+            default:
+            tooday = "주말";
+            break;
+        }
+
+        console.log("오늘은 "+tooday+" 입니다.");
+
+
+        // 요일을 입력하는 부분을 사용자가 날짜를 입력하면 해당하는 요일이 출력되는 프로그램을 작성하세요
+
+        var date2 = prompt("날짜를 입력하세요. 입력 예시 : 2020-11-17", "0000-00-00")
+
+        day2 = new Date(date2).getDay();
+
+        if (day2 == 1){
+            console.log("월요일")
+        }
+
+        else if (day2 == 2) {
+            console.log("화요일")
+        }
+
+        else if (day2 == 3) {
+            console.log("수요일")
+        }
+
+        else if (day2 == 4) {
+            console.log("목요일")
+        }
+
+        else if (day2 == 5) {
+            console.log("금요일")
+        }
+
+        else if (day2 == 6) {
+            console.log("토요일")
+        }
+
+        else if (day2 == 0) {
+            console.log("일요일")
+        }
+
+        else {
+            console.log("잘못 입력됨")
+        }
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

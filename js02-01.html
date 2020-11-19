@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 2-1</title>
+    <script>
+        window.addEventListener
+        ("DOMContentLoaded", function() {
+            var oct = 015;
+            var hex = 0x15;
+            var condition = true;
+
+            document.write("8진수 015는 십진수로 " + oct + "<br>");
+            document.write("16진수 0x15는 십진수로 " + hex + "<br>");
+            document.write("condition은 " + condition + "<br>");
+            document.write("문자열 : 단일인용부호로도 표현 <br>");
+            document.write("그녀는 \"누구세요\"라고 했습니다 ");
+        });
+        // 자바스크립트 변수는 데이터 타입을 구분하지 않는다.
+        //  문자열 연결 연산자 +
+        // \는 이스케이프 문자
+        // \b : 백스페이스
+        // \t : 수평 탭
+        // \n : 수직 탭 (엔터)
+        // \v : 개행 
+        // \r : 리턴
+        // \f : 폼 피드
+        // \' : 따옴표
+        // \" : 쌍따옴표
+        // \\ : 역슬래시
+        // \0 : NULL
+        // \xXX : 라틴-1 문자, 16진수로 표현
+        // \uXXXX : 유니코드 문자, 16진수로 표현
+        // UTF-8, UTF-16, UTF-32
+
+        console.log("abcdefghi\b\b\b");
+        console.log("abc\t\tdef\t\tghi");
+        console.log("ab\ncd\nef\nghi");
+        console.log("\"abc\"def\"ghi\"");
+        console.log('\'abc\'def\'ghi\'');
+        console.log("'abc'def'ghi'");
+        console.log("\\abc\\def\\ghi")
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
